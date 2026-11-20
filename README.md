@@ -1,9 +1,10 @@
 # DroneOps: Aerial Survey and Fleet Management System
 
 Group 7 | Web Technologies[L] .
-See Live changes: https://raw.githack.com/Akib-Osmani/DroneOps/main/index.html
+
 DroneOps keeps an organisation's drone work in one place. Pilots request flights, technicians record the condition of every drone, a dispatcher approves or denies each flight request, and a safety officer watches damage reports and pilot licenses.
 
+## See Live changes: https://raw.githack.com/Akib-Osmani/DroneOps/main/index.html
 ## Group
 
 | No. | Name | Student ID | Pages |
