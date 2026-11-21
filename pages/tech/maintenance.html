@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maintenance Update - DroneOps</title>
+</head>
+<body>
+    <header>
+        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+        <nav>
+            <a href="../../index.html">Home</a> |
+            <a href="../auth/login.html">Login</a> |
+            <a href="../auth/register.html">Register</a> |
+            <a href="../auth/profile.html">Pilot Dashboard</a> |
+            <a href="../pilot/flight_request.html">New Flight Plan</a> |
+            <a href="../pilot/my_flights.html">My Flights</a> |
+            <a href="../tech/drones.html">Drone Grid</a> |
+            <a href="../tech/maintenance.html">Maintenance</a> |
+            <a href="../admin/flights.html">Flight Schedule</a> |
+            <a href="../admin/fleet.html">Fleet</a> |
+            <a href="../admin/users.html">Users</a> |
+            <a href="../safety/dashboard.html">Safety</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Maintenance Update</h1>
+
+        <section>
+            <h2>New maintenance log</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="drone_id">Drone</label>
+                    <select id="drone_id" name="drone_id" required>
+                        <option value="">-- Select a drone --</option>
+                        <option value="1">DJI-M300-001 - DJI Matrice 300 RTK (Active, 42 cycles)</option>
+                        <option value="2">DJI-M3E-002 - DJI Mavic 3 Enterprise (Active, 118 cycles)</option>
+                        <option value="3">AUT-EVO-003 - Autel EVO II Pro (Grounded, 305 cycles)</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="description">Work done / issue found</label><br>
+                    <textarea id="description" name="description" rows="4" cols="50" required minlength="5" maxlength="1000"
+                              placeholder="e.g. Propeller replaced, motor 3 inspected"></textarea>
+                </p>
+                <p>
+                    <label for="cycles_added">Battery cycles to add</label>
+                    <input type="number" id="cycles_added" name="cycles_added" value="0" min="0" max="1000" required>
+                </p>
+                <p>
+                    <label for="status">New status</label>
+                    <select id="status" name="status" required>
+                        <option value="Active">Active</option>
+                        <option value="Grounded">Grounded</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="checkbox" id="damage" name="damage" value="1">
+                    <label for="damage">Damage reported (the drone must be grounded)</label>
+                </p>
+                <p>
+                    <button type="submit">Save maintenance log</button>
+                    <button type="reset">Clear form</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Recent maintenance logs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Drone</th>
+                        <th>Technician</th>
+                        <th>Work</th>
+                        <th>Cycles</th>
+                        <th>Damage</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-10-12 14:20</td>
+                        <td>AUT-EVO-003</td>
+                        <td>Demo Technician</td>
+                        <td>Cracked arm found after landing, sent for repair</td>
+                        <td>+0</td>
+                        <td>Yes</td>
+                        <td>Grounded</td>
+                    </tr>
+                    <tr>
+                        <td>2026-10-10 09:05</td>
+                        <td>DJI-M3E-002</td>
+                        <td>Demo Technician</td>
+                        <td>Propellers replaced, firmware updated</td>
+                        <td>+12</td>
+                        <td>No</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>2026-10-08 16:40</td>
+                        <td>DJI-M300-001</td>
+                        <td>Demo Technician</td>
+                        <td>Routine check, batteries balanced</td>
+                        <td>+8</td>
+                        <td>No</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>DroneOps - Web Technologies (Lab) group project</p>
+    </footer>
+</body>
+</html>
