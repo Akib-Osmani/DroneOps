@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fleet Management - DroneOps</title>
+</head>
+<body>
+    <header>
+        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+        <nav>
+            <a href="../../index.html">Home</a> |
+            <a href="../auth/login.html">Login</a> |
+            <a href="../auth/register.html">Register</a> |
+            <a href="../auth/profile.html">Pilot Dashboard</a> |
+            <a href="../pilot/flight_request.html">New Flight Plan</a> |
+            <a href="../pilot/my_flights.html">My Flights</a> |
+            <a href="../tech/drones.html">Drone Grid</a> |
+            <a href="../tech/maintenance.html">Maintenance</a> |
+            <a href="../admin/flights.html">Flight Schedule</a> |
+            <a href="../admin/fleet.html">Fleet</a> |
+            <a href="../admin/users.html">Users</a> |
+            <a href="../safety/dashboard.html">Safety</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Fleet Management</h1>
+
+        <section>
+            <h2>Add drone</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="serial_no">Serial number</label>
+                    <input type="text" id="serial_no" name="serial_no" required
+                           pattern="[A-Za-z0-9\-]{3,30}"
+                           title="3 to 30 letters, numbers or dashes"
+                           placeholder="DJI-M300-004">
+                </p>
+                <p>
+                    <label for="model">Model</label>
+                    <input type="text" id="model" name="model" required minlength="2" maxlength="100" placeholder="DJI Matrice 300 RTK">
+                </p>
+                <p>
+                    <button type="submit">Add to fleet</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Fleet</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Serial number</th>
+                        <th>Model</th>
+                        <th>Status</th>
+                        <th>Battery cycles</th>
+                        <th>Added</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DJI-M300-001</td>
+                        <td>DJI Matrice 300 RTK</td>
+                        <td>Active</td>
+                        <td>42</td>
+                        <td>2026-09-01</td>
+                        <td>
+                            <form action="#" method="post">
+                                <input type="hidden" name="drone_id" value="1">
+                                <button type="submit">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DJI-M3E-002</td>
+                        <td>DJI Mavic 3 Enterprise</td>
+                        <td>Active</td>
+                        <td>118</td>
+                        <td>2026-09-01</td>
+                        <td>
+                            <form action="#" method="post">
+                                <input type="hidden" name="drone_id" value="2">
+                                <button type="submit">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>AUT-EVO-003</td>
+                        <td>Autel EVO II Pro</td>
+                        <td>Grounded</td>
+                        <td>305</td>
+                        <td>2026-09-15</td>
+                        <td>
+                            <form action="#" method="post">
+                                <input type="hidden" name="drone_id" value="3">
+                                <button type="submit">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>DroneOps - Web Technologies (Lab) group project</p>
+    </footer>
+</body>
+</html>
