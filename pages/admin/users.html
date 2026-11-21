@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Management - DroneOps</title>
+</head>
+<body>
+    <header>
+        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+        <nav>
+            <a href="../../index.html">Home</a> |
+            <a href="../auth/login.html">Login</a> |
+            <a href="../auth/register.html">Register</a> |
+            <a href="../auth/profile.html">Pilot Dashboard</a> |
+            <a href="../pilot/flight_request.html">New Flight Plan</a> |
+            <a href="../pilot/my_flights.html">My Flights</a> |
+            <a href="../tech/drones.html">Drone Grid</a> |
+            <a href="../tech/maintenance.html">Maintenance</a> |
+            <a href="../admin/flights.html">Flight Schedule</a> |
+            <a href="../admin/fleet.html">Fleet</a> |
+            <a href="../admin/users.html">Users</a> |
+            <a href="../safety/dashboard.html">Safety</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>User Management</h1>
+
+        <section>
+            <h2>Create account</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="100">
+                </p>
+                <p>
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        <option value="pilot" selected>Pilot</option>
+                        <option value="technician">Technician</option>
+                        <option value="dispatcher">Dispatcher</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="email">University email</label>
+                    <input type="email" id="email" name="email" required
+                           pattern=".+@(student\.)?aiub\.edu"
+                           title="An @aiub.edu or @student.aiub.edu email">
+                </p>
+
+                <fieldset>
+                    <legend>Temporary password</legend>
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password">
+                    </p>
+                    <p>
+                        <label for="confirm">Confirm password</label>
+                        <input type="password" id="confirm" name="confirm" required minlength="8" autocomplete="new-password">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pilot license (pilots only)</legend>
+                    <p>
+                        <label for="license_no">License number</label>
+                        <input type="text" id="license_no" name="license_no"
+                               pattern="DRN-[0-9]{6}"
+                               title="DRN- followed by 6 digits, e.g. DRN-123456"
+                               placeholder="DRN-123456">
+                    </p>
+                    <p>
+                        <label for="license_expiry">Expiry date</label>
+                        <input type="date" id="license_expiry" name="license_expiry">
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Create account</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>All users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>License</th>
+                        <th>Expiry</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Demo Dispatcher</td>
+                        <td>dispatcher@aiub.edu</td>
+                        <td>Dispatcher</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>(you)</td>
+                    </tr>
+                    <tr>
+                        <td>Demo Technician</td>
+                        <td>technician@aiub.edu</td>
+                        <td>Technician</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>
+                            <form action="#" method="post">
+                                <input type="hidden" name="user_id" value="2">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Demo Pilot</td>
+                        <td>pilot@student.aiub.edu</td>
+                        <td>Pilot</td>
+                        <td>DRN-100001</td>
+                        <td>2028-12-31</td>
+                        <td>
+                            <form action="#" method="post">
+                                <input type="hidden" name="user_id" value="3">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tanvir Ahmed</td>
+                        <td>23-11111-1@student.aiub.edu</td>
+                        <td>Pilot</td>
+                        <td>DRN-200002</td>
+                        <td>2027-06-30</td>
+                        <td>
+                            <form action="#" method="post">
+                                <input type="hidden" name="user_id" value="4">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>DroneOps - Web Technologies (Lab) group project</p>
+    </footer>
+</body>
+</html>
