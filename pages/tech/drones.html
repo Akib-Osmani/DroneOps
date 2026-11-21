@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drone Grid - DroneOps</title>
+</head>
+<body>
+    <header>
+        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+        <nav>
+            <a href="../../index.html">Home</a> |
+            <a href="../auth/login.html">Login</a> |
+            <a href="../auth/register.html">Register</a> |
+            <a href="../auth/profile.html">Pilot Dashboard</a> |
+            <a href="../pilot/flight_request.html">New Flight Plan</a> |
+            <a href="../pilot/my_flights.html">My Flights</a> |
+            <a href="../tech/drones.html">Drone Grid</a> |
+            <a href="../tech/maintenance.html">Maintenance</a> |
+            <a href="../admin/flights.html">Flight Schedule</a> |
+            <a href="../admin/fleet.html">Fleet</a> |
+            <a href="../admin/users.html">Users</a> |
+            <a href="../safety/dashboard.html">Safety</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Drone Grid</h1>
+        <p>Every drone in the fleet. Ground a drone to stop it from flying, or clear it when it is ready again.</p>
+        <p><a href="maintenance.html">Log maintenance work</a></p>
+
+        <article>
+            <h2>DJI-M300-001</h2>
+            <ul>
+                <li>Model: DJI Matrice 300 RTK</li>
+                <li>Status: Active</li>
+                <li>Battery cycles: 42</li>
+            </ul>
+            <form action="#" method="post">
+                <input type="hidden" name="drone_id" value="1">
+                <button type="submit" name="status" value="Grounded">Ground drone</button>
+            </form>
+        </article>
+
+        <article>
+            <h2>DJI-M3E-002</h2>
+            <ul>
+                <li>Model: DJI Mavic 3 Enterprise</li>
+                <li>Status: Active</li>
+                <li>Battery cycles: 118</li>
+            </ul>
+            <form action="#" method="post">
+                <input type="hidden" name="drone_id" value="2">
+                <button type="submit" name="status" value="Grounded">Ground drone</button>
+            </form>
+        </article>
+
+        <article>
+            <h2>AUT-EVO-003</h2>
+            <ul>
+                <li>Model: Autel EVO II Pro</li>
+                <li>Status: Grounded</li>
+                <li>Battery cycles: 305</li>
+            </ul>
+            <form action="#" method="post">
+                <input type="hidden" name="drone_id" value="3">
+                <button type="submit" name="status" value="Active">Clear for flight</button>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <p>DroneOps - Web Technologies (Lab) group project</p>
+    </footer>
+</body>
+</html>
