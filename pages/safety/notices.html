@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compliance Notices - DroneOps</title>
+</head>
+<body>
+    <header>
+        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+        <nav>
+            <a href="../../index.html">Home</a> |
+            <a href="../auth/login.html">Login</a> |
+            <a href="../auth/register.html">Register</a> |
+            <a href="../auth/profile.html">Pilot Dashboard</a> |
+            <a href="../pilot/flight_request.html">New Flight Plan</a> |
+            <a href="../pilot/my_flights.html">My Flights</a> |
+            <a href="../tech/drones.html">Drone Grid</a> |
+            <a href="../tech/maintenance.html">Maintenance</a> |
+            <a href="../admin/flights.html">Flight Schedule</a> |
+            <a href="../admin/fleet.html">Fleet</a> |
+            <a href="../admin/users.html">Users</a> |
+            <a href="../safety/dashboard.html">Safety</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Compliance Notices</h1>
+        <p>Send license reminders, safety directives and grounding alerts to pilots and crew.</p>
+        <p><a href="dashboard.html">Back to dashboard</a> | <a href="pilots.html">Pilot Compliance</a></p>
+
+        <section>
+            <h2>Send a notice</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="recipient_id">Recipient</label>
+                    <select id="recipient_id" name="recipient_id" required>
+                        <option value="">-- Select a recipient --</option>
+                        <option value="3">Demo Pilot (pilot)</option>
+                        <option value="4">Tanvir Ahmed (pilot)</option>
+                        <option value="2">Demo Technician (technician)</option>
+                        <option value="1">Demo Dispatcher (dispatcher)</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="notice_type">Category</label>
+                    <select id="notice_type" name="notice_type" required>
+                        <option value="">-- Select a category --</option>
+                        <option>License Expiry</option>
+                        <option>Safety Directive</option>
+                        <option>Grounding Alert</option>
+                        <option>General Compliance</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required minlength="3" maxlength="200"
+                           placeholder="e.g. License renewal due in 30 days">
+                </p>
+                <p>
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required minlength="5" maxlength="1000"
+                              placeholder="What the person must do, and by when"></textarea>
+                </p>
+                <p>
+                    <button type="submit">Send notice</button>
+                    <button type="reset">Clear form</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Sent notices</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Sent</th>
+                        <th>Recipient</th>
+                        <th>Category</th>
+                        <th>Subject</th>
+                        <th>Status</th>
+                        <th>Archive</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2026-11-15 10:30</td>
+                        <td>Tanvir Ahmed (pilot)</td>
+                        <td>License Expiry</td>
+                        <td>License renewal due by June 2027</td>
+                        <td>Sent</td>
+                        <td>
+                            <form action="#" method="post">
+                                <input type="hidden" name="notice_id" value="1">
+                                <button type="submit">Archive</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>DroneOps - Web Technologies (Lab) group project</p>
+    </footer>
+</body>
+</html>
