@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grounding &amp; Damage Audit - DroneOps</title>
+</head>
+<body>
+    <header>
+        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+        <nav>
+            <a href="../../index.html">Home</a> |
+            <a href="../auth/login.html">Login</a> |
+            <a href="../auth/register.html">Register</a> |
+            <a href="../auth/profile.html">Pilot Dashboard</a> |
+            <a href="../pilot/flight_request.html">New Flight Plan</a> |
+            <a href="../pilot/my_flights.html">My Flights</a> |
+            <a href="../tech/drones.html">Drone Grid</a> |
+            <a href="../tech/maintenance.html">Maintenance</a> |
+            <a href="../admin/flights.html">Flight Schedule</a> |
+            <a href="../admin/fleet.html">Fleet</a> |
+            <a href="../admin/users.html">Users</a> |
+            <a href="../safety/dashboard.html">Safety</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Grounding &amp; Damage Audit</h1>
+        <p>Review the drones that technicians grounded or reported as damaged, and record the safety decision.</p>
+        <p><a href="dashboard.html">Back to dashboard</a></p>
+
+        <form action="#" method="get">
+            <label for="drone_filter">Drone</label>
+            <select id="drone_filter" name="drone_id">
+                <option value="">All drones</option>
+                <option value="1">DJI-M300-001</option>
+                <option value="2">DJI-M3E-002</option>
+                <option value="3">AUT-EVO-003</option>
+            </select>
+            <label for="status_filter">Safety status</label>
+            <select id="status_filter" name="status">
+                <option value="">All statuses</option>
+                <option>Under Investigation</option>
+                <option>Resolved / Cleared</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Log</th>
+                        <th>Drone</th>
+                        <th>Technician report</th>
+                        <th>Damage</th>
+                        <th>Safety status</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="incident-3">
+                        <td>#3</td>
+                        <td>AUT-EVO-003<br>Autel EVO II Pro<br>Grounded</td>
+                        <td>Demo Technician<br>2026-10-12 14:20<br>Cracked arm found after landing, sent for repair</td>
+                        <td>Damage reported</td>
+                        <td>Under Investigation</td>
+                        <td>
+                            <form action="#" method="post">
+                                <input type="hidden" name="incident_id" value="3">
+                                <label for="safety_status-3">New status</label>
+                                <select id="safety_status-3" name="safety_status">
+                                    <option selected>Under Investigation</option>
+                                    <option>Resolved / Cleared</option>
+                                </select>
+                                <label for="safety_notes-3">Resolution notes</label>
+                                <input type="text" id="safety_notes-3" name="safety_notes" maxlength="500" placeholder="Needed when you clear the drone">
+                                <button type="submit">Save status</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>DroneOps - Web Technologies (Lab) group project</p>
+    </footer>
+</body>
+</html>
