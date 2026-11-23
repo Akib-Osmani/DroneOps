@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Safety Dashboard - DroneOps</title>
+</head>
+<body>
+    <header>
+        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+        <nav>
+            <a href="../../index.html">Home</a> |
+            <a href="../auth/login.html">Login</a> |
+            <a href="../auth/register.html">Register</a> |
+            <a href="../auth/profile.html">Pilot Dashboard</a> |
+            <a href="../pilot/flight_request.html">New Flight Plan</a> |
+            <a href="../pilot/my_flights.html">My Flights</a> |
+            <a href="../tech/drones.html">Drone Grid</a> |
+            <a href="../tech/maintenance.html">Maintenance</a> |
+            <a href="../admin/flights.html">Flight Schedule</a> |
+            <a href="../admin/fleet.html">Fleet</a> |
+            <a href="../admin/users.html">Users</a> |
+            <a href="../safety/dashboard.html">Safety</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Safety Dashboard</h1>
+        <p>Fleet readiness, damage reports and pilot license compliance in one place.</p>
+        <p>
+            <a href="groundings.html">Groundings &amp; Damage</a> |
+            <a href="pilots.html">Pilot Compliance</a> |
+            <a href="notices.html">Issue Notice</a>
+        </p>
+
+        <section>
+            <h2>Safety numbers</h2>
+            <dl>
+                <dt>Fleet availability</dt>
+                <dd>67%</dd>
+                <dt>Grounded drones</dt>
+                <dd>1</dd>
+                <dt>Open safety flags</dt>
+                <dd>1</dd>
+                <dt>Licenses expired or expiring</dt>
+                <dd>0</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Groundings and damage reports</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Log</th>
+                        <th>Drone</th>
+                        <th>Model</th>
+                        <th>Reported</th>
+                        <th>Damage</th>
+                        <th>Safety status</th>
+                        <th>Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#3</td>
+                        <td>AUT-EVO-003</td>
+                        <td>Autel EVO II Pro</td>
+                        <td>2026-10-12 14:20</td>
+                        <td>Damage reported</td>
+                        <td>Under Investigation</td>
+                        <td><a href="groundings.html#incident-3">Review</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Pilot license compliance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pilot</th>
+                        <th>University email</th>
+                        <th>License</th>
+                        <th>Expires</th>
+                        <th>Flight hours</th>
+                        <th>Status</th>
+                        <th>Notice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Demo Pilot</td>
+                        <td>pilot@student.aiub.edu</td>
+                        <td>DRN-100001</td>
+                        <td>2028-12-31</td>
+                        <td>1.5</td>
+                        <td>Compliant</td>
+                        <td><a href="notices.html?recipient_id=3">Issue notice</a></td>
+                    </tr>
+                    <tr>
+                        <td>Tanvir Ahmed</td>
+                        <td>23-11111-1@student.aiub.edu</td>
+                        <td>DRN-200002</td>
+                        <td>2027-06-30</td>
+                        <td>0</td>
+                        <td>Compliant</td>
+                        <td><a href="notices.html?recipient_id=4">Issue notice</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>DroneOps - Web Technologies (Lab) group project</p>
+    </footer>
+</body>
+</html>
