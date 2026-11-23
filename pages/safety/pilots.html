@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pilot Compliance - DroneOps</title>
+</head>
+<body>
+    <header>
+        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+        <nav>
+            <a href="../../index.html">Home</a> |
+            <a href="../auth/login.html">Login</a> |
+            <a href="../auth/register.html">Register</a> |
+            <a href="../auth/profile.html">Pilot Dashboard</a> |
+            <a href="../pilot/flight_request.html">New Flight Plan</a> |
+            <a href="../pilot/my_flights.html">My Flights</a> |
+            <a href="../tech/drones.html">Drone Grid</a> |
+            <a href="../tech/maintenance.html">Maintenance</a> |
+            <a href="../admin/flights.html">Flight Schedule</a> |
+            <a href="../admin/fleet.html">Fleet</a> |
+            <a href="../admin/users.html">Users</a> |
+            <a href="../safety/dashboard.html">Safety</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Pilot Compliance</h1>
+        <p>Every pilot's license, expiry date and flight hours. Send a notice when a license needs attention.</p>
+        <p><a href="dashboard.html">Back to dashboard</a> | <a href="notices.html">Issue Notice</a></p>
+
+        <table>
+            <caption>Pilot roster</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Pilot</th>
+                    <th>University email</th>
+                    <th>License</th>
+                    <th>Expires</th>
+                    <th>Flight hours</th>
+                    <th>Status</th>
+                    <th>Notice</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#3</td>
+                    <td>Demo Pilot</td>
+                    <td>pilot@student.aiub.edu</td>
+                    <td>DRN-100001</td>
+                    <td>2028-12-31</td>
+                    <td>1.5</td>
+                    <td>Compliant</td>
+                    <td><a href="notices.html?recipient_id=3">Issue notice</a></td>
+                </tr>
+                <tr>
+                    <td>#4</td>
+                    <td>Tanvir Ahmed</td>
+                    <td>23-11111-1@student.aiub.edu</td>
+                    <td>DRN-200002</td>
+                    <td>2027-06-30</td>
+                    <td>0</td>
+                    <td>Compliant</td>
+                    <td><a href="notices.html?recipient_id=4">Issue notice</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>DroneOps - Web Technologies (Lab) group project</p>
+    </footer>
+</body>
+</html>
