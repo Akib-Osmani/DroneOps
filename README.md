@@ -17,5 +17,3 @@ DroneOps keeps an organisation's drone work in one place. Pilots request flights
 ## How to open
 
 Open `index.html` in a web browser. It links to every page.
-
-

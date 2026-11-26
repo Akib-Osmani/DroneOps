@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login - DroneOps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <header>
-        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+    <header class="navbar">
+        <a href="../../index.html" class="brand">DroneOps</a>
         <nav>
-            <a href="../../index.html">Home</a> |
-            <a href="../auth/login.html">Login</a> |
-            <a href="../auth/register.html">Register</a> |
-            <a href="../auth/profile.html">Pilot Dashboard</a> |
-            <a href="../pilot/flight_request.html">New Flight Plan</a> |
-            <a href="../pilot/my_flights.html">My Flights</a> |
-            <a href="../tech/drones.html">Drone Grid</a> |
-            <a href="../tech/maintenance.html">Maintenance</a> |
-            <a href="../admin/flights.html">Flight Schedule</a> |
-            <a href="../admin/fleet.html">Fleet</a> |
-            <a href="../admin/users.html">Users</a> |
+            <a href="../../index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="profile.html">Pilot Dashboard</a>
+            <a href="../pilot/flight_request.html">New Flight Plan</a>
+            <a href="../pilot/my_flights.html">My Flights</a>
+            <a href="../tech/drones.html">Drone Grid</a>
+            <a href="../tech/maintenance.html">Maintenance</a>
+            <a href="../admin/flights.html">Flight Schedule</a>
+            <a href="../admin/fleet.html">Fleet</a>
+            <a href="../admin/users.html">Users</a>
             <a href="../safety/dashboard.html">Safety</a>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <h1>Crew Login</h1>
-        <p>Pilots, technicians and dispatchers log in here.</p>
+        <p class="muted">Pilots, technicians and dispatchers log in here.</p>
 
         <form action="#" method="post">
             <p>
@@ -37,19 +40,19 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required autocomplete="current-password">
             </p>
-            <p>
+            <p class="check">
                 <input type="checkbox" id="remember" name="remember" value="1">
                 <label for="remember">Remember me</label>
             </p>
-            <p>
-                <button type="submit">Login</button>
+            <p class="form-actions">
+                <button type="submit" class="btn">Login</button>
             </p>
         </form>
 
-        <p>New pilot? <a href="register.html">Create an account</a></p>
+        <p class="muted">New pilot? <a href="register.html">Create an account</a></p>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>DroneOps - Web Technologies (Lab) group project</p>
     </footer>
 </body>
