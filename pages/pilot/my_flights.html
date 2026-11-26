@@ -4,90 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Flights - DroneOps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <header>
-        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+    <header class="navbar">
+        <a href="../../index.html" class="brand">DroneOps</a>
         <nav>
-            <a href="../../index.html">Home</a> |
-            <a href="../auth/login.html">Login</a> |
-            <a href="../auth/register.html">Register</a> |
-            <a href="../auth/profile.html">Pilot Dashboard</a> |
-            <a href="../pilot/flight_request.html">New Flight Plan</a> |
-            <a href="../pilot/my_flights.html">My Flights</a> |
-            <a href="../tech/drones.html">Drone Grid</a> |
-            <a href="../tech/maintenance.html">Maintenance</a> |
-            <a href="../admin/flights.html">Flight Schedule</a> |
-            <a href="../admin/fleet.html">Fleet</a> |
-            <a href="../admin/users.html">Users</a> |
+            <a href="../../index.html">Home</a>
+            <a href="../auth/login.html">Login</a>
+            <a href="../auth/register.html">Register</a>
+            <a href="../auth/profile.html">Pilot Dashboard</a>
+            <a href="flight_request.html">New Flight Plan</a>
+            <a href="my_flights.html">My Flights</a>
+            <a href="../tech/drones.html">Drone Grid</a>
+            <a href="../tech/maintenance.html">Maintenance</a>
+            <a href="../admin/flights.html">Flight Schedule</a>
+            <a href="../admin/fleet.html">Fleet</a>
+            <a href="../admin/users.html">Users</a>
             <a href="../safety/dashboard.html">Safety</a>
         </nav>
     </header>
 
-    <main>
-        <h1>My Flights</h1>
-        <p><a href="flight_request.html">Request a new flight</a></p>
+    <main class="container">
+        <div class="page-head">
+            <h1>My Flights</h1>
+            <a href="flight_request.html" class="btn">Request a new flight</a>
+        </div>
 
-        <table>
-            <caption>Flight plans submitted by Demo Pilot</caption>
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Start</th>
-                    <th>Drone</th>
-                    <th>Duration</th>
-                    <th>Coordinates</th>
-                    <th>Purpose</th>
-                    <th>Status</th>
-                    <th>Dispatcher's note</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>5</td>
-                    <td>2027-03-15 10:00</td>
-                    <td>DJI-M3E-002</td>
-                    <td>60 min</td>
-                    <td>23.810331, 90.412521</td>
-                    <td>Bridge inspection</td>
-                    <td>Pending</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>2027-02-10 10:00</td>
-                    <td>DJI-M300-001</td>
-                    <td>60 min</td>
-                    <td>23.822350, 90.427160</td>
-                    <td>Roof inspection of Building D</td>
-                    <td>Approved</td>
-                    <td>All clear</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>2026-10-30 07:00</td>
-                    <td>AUT-EVO-003</td>
-                    <td>30 min</td>
-                    <td>23.794500, 90.404300</td>
-                    <td>Construction site mapping</td>
-                    <td>Denied</td>
-                    <td>Drone grounded</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2026-09-01 09:00</td>
-                    <td>DJI-M300-001</td>
-                    <td>90 min</td>
-                    <td>23.822350, 90.427160</td>
-                    <td>Campus roof survey</td>
-                    <td>Approved</td>
-                    <td>All clear</td>
-                </tr>
-            </tbody>
-        </table>
+        <section class="card">
+            <table>
+                <caption>Flight plans submitted by Demo Pilot</caption>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Start</th>
+                        <th>Drone</th>
+                        <th>Duration</th>
+                        <th>Coordinates</th>
+                        <th>Purpose</th>
+                        <th>Status</th>
+                        <th>Dispatcher's note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="mono">5</td>
+                        <td class="mono">2027-03-15 10:00</td>
+                        <td class="mono">DJI-M3E-002</td>
+                        <td class="mono">60 min</td>
+                        <td class="mono">23.810331, 90.412521</td>
+                        <td>Bridge inspection</td>
+                        <td><span class="badge badge-pending">Pending</span></td>
+                        <td class="muted">-</td>
+                    </tr>
+                    <tr>
+                        <td class="mono">3</td>
+                        <td class="mono">2027-02-10 10:00</td>
+                        <td class="mono">DJI-M300-001</td>
+                        <td class="mono">60 min</td>
+                        <td class="mono">23.822350, 90.427160</td>
+                        <td>Roof inspection of Building D</td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="muted">All clear</td>
+                    </tr>
+                    <tr>
+                        <td class="mono">2</td>
+                        <td class="mono">2026-10-30 07:00</td>
+                        <td class="mono">AUT-EVO-003</td>
+                        <td class="mono">30 min</td>
+                        <td class="mono">23.794500, 90.404300</td>
+                        <td>Construction site mapping</td>
+                        <td><span class="badge badge-denied">Denied</span></td>
+                        <td class="muted">Drone grounded</td>
+                    </tr>
+                    <tr>
+                        <td class="mono">1</td>
+                        <td class="mono">2026-09-01 09:00</td>
+                        <td class="mono">DJI-M300-001</td>
+                        <td class="mono">90 min</td>
+                        <td class="mono">23.822350, 90.427160</td>
+                        <td>Campus roof survey</td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="muted">All clear</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>DroneOps - Web Technologies (Lab) group project</p>
     </footer>
 </body>
