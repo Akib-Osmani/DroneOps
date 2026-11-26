@@ -4,42 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pilot Dashboard - DroneOps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <header>
-        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+    <header class="navbar">
+        <a href="../../index.html" class="brand">DroneOps</a>
         <nav>
-            <a href="../../index.html">Home</a> |
-            <a href="../auth/login.html">Login</a> |
-            <a href="../auth/register.html">Register</a> |
-            <a href="../auth/profile.html">Pilot Dashboard</a> |
-            <a href="../pilot/flight_request.html">New Flight Plan</a> |
-            <a href="../pilot/my_flights.html">My Flights</a> |
-            <a href="../tech/drones.html">Drone Grid</a> |
-            <a href="../tech/maintenance.html">Maintenance</a> |
-            <a href="../admin/flights.html">Flight Schedule</a> |
-            <a href="../admin/fleet.html">Fleet</a> |
-            <a href="../admin/users.html">Users</a> |
+            <a href="../../index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="profile.html">Pilot Dashboard</a>
+            <a href="../pilot/flight_request.html">New Flight Plan</a>
+            <a href="../pilot/my_flights.html">My Flights</a>
+            <a href="../tech/drones.html">Drone Grid</a>
+            <a href="../tech/maintenance.html">Maintenance</a>
+            <a href="../admin/flights.html">Flight Schedule</a>
+            <a href="../admin/fleet.html">Fleet</a>
+            <a href="../admin/users.html">Users</a>
             <a href="../safety/dashboard.html">Safety</a>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <h1>Pilot Dashboard</h1>
 
-        <section>
+        <section class="card">
             <h2>Summary</h2>
-            <dl>
-                <dt>Total flight hours</dt>
-                <dd>1.5</dd>
-                <dt>Upcoming approved flights</dt>
-                <dd>1</dd>
-                <dt>License</dt>
-                <dd>DRN-100001, expires 31 December 2028</dd>
+            <dl class="stats">
+                <div class="stat">
+                    <dt>Total flight hours</dt>
+                    <dd class="mono">1.5</dd>
+                </div>
+                <div class="stat">
+                    <dt>Upcoming approved flights</dt>
+                    <dd class="mono">1</dd>
+                </div>
+                <div class="stat">
+                    <dt>License</dt>
+                    <dd class="mono">DRN-100001</dd>
+                </div>
+                <div class="stat">
+                    <dt>License expires</dt>
+                    <dd class="mono">2028-12-31</dd>
+                </div>
             </dl>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Upcoming approved flights</h2>
             <table>
                 <thead>
@@ -53,10 +66,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>2027-02-10 10:00</td>
-                        <td>DJI-M300-001</td>
-                        <td>60 min</td>
-                        <td>23.822350, 90.427160</td>
+                        <td class="mono">2027-02-10 10:00</td>
+                        <td class="mono">DJI-M300-001</td>
+                        <td class="mono">60 min</td>
+                        <td class="mono">23.822350, 90.427160</td>
                         <td>Roof inspection of Building D</td>
                     </tr>
                 </tbody>
@@ -64,52 +77,58 @@
             <p><a href="../pilot/flight_request.html">Request a new flight</a></p>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Edit profile</h2>
             <form action="#" method="post">
-                <p>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" value="pilot@student.aiub.edu" disabled>
-                </p>
-                <p>
-                    <label for="name">Full name</label>
-                    <input type="text" id="name" name="name" value="Demo Pilot" required minlength="2" maxlength="100">
-                </p>
+                <div class="row">
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="pilot@student.aiub.edu" disabled>
+                    </p>
+                    <p>
+                        <label for="name">Full name</label>
+                        <input type="text" id="name" name="name" value="Demo Pilot" required minlength="2" maxlength="100">
+                    </p>
+                </div>
 
                 <fieldset>
                     <legend>Drone pilot license</legend>
-                    <p>
-                        <label for="license_no">License number</label>
-                        <input type="text" id="license_no" name="license_no" value="DRN-100001" required
-                               pattern="DRN-[0-9]{6}"
-                               title="DRN- followed by 6 digits, e.g. DRN-123456">
-                    </p>
-                    <p>
-                        <label for="license_expiry">Expiry date</label>
-                        <input type="date" id="license_expiry" name="license_expiry" value="2028-12-31" required>
-                    </p>
+                    <div class="row">
+                        <p>
+                            <label for="license_no">License number</label>
+                            <input type="text" id="license_no" name="license_no" value="DRN-100001" required class="mono"
+                                   pattern="DRN-[0-9]{6}"
+                                   title="DRN- followed by 6 digits, e.g. DRN-123456">
+                        </p>
+                        <p>
+                            <label for="license_expiry">Expiry date</label>
+                            <input type="date" id="license_expiry" name="license_expiry" value="2028-12-31" required>
+                        </p>
+                    </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>Change password (leave blank to keep the current one)</legend>
-                    <p>
-                        <label for="password">New password</label>
-                        <input type="password" id="password" name="password" minlength="8" autocomplete="new-password">
-                    </p>
-                    <p>
-                        <label for="confirm">Confirm new password</label>
-                        <input type="password" id="confirm" name="confirm" minlength="8" autocomplete="new-password">
-                    </p>
+                    <div class="row">
+                        <p>
+                            <label for="password">New password</label>
+                            <input type="password" id="password" name="password" minlength="8" autocomplete="new-password">
+                        </p>
+                        <p>
+                            <label for="confirm">Confirm new password</label>
+                            <input type="password" id="confirm" name="confirm" minlength="8" autocomplete="new-password">
+                        </p>
+                    </div>
                 </fieldset>
 
-                <p>
-                    <button type="submit">Save changes</button>
+                <p class="form-actions">
+                    <button type="submit" class="btn">Save changes</button>
                 </p>
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>DroneOps - Web Technologies (Lab) group project</p>
     </footer>
 </body>
