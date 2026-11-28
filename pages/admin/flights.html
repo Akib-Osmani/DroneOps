@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Flight Schedule - DroneOps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <header>
-        <p><a href="../../index.html"><strong>DroneOps</strong></a> - Aerial Survey &amp; Fleet Management</p>
+    <header class="navbar">
+        <a href="../../index.html" class="brand">DroneOps</a>
         <nav>
-            <a href="../../index.html">Home</a> |
-            <a href="../auth/login.html">Login</a> |
-            <a href="../auth/register.html">Register</a> |
-            <a href="../auth/profile.html">Pilot Dashboard</a> |
-            <a href="../pilot/flight_request.html">New Flight Plan</a> |
-            <a href="../pilot/my_flights.html">My Flights</a> |
-            <a href="../tech/drones.html">Drone Grid</a> |
-            <a href="../tech/maintenance.html">Maintenance</a> |
-            <a href="../admin/flights.html">Flight Schedule</a> |
-            <a href="../admin/fleet.html">Fleet</a> |
-            <a href="../admin/users.html">Users</a> |
+            <a href="../../index.html">Home</a>
+            <a href="../auth/login.html">Login</a>
+            <a href="../auth/register.html">Register</a>
+            <a href="../auth/profile.html">Pilot Dashboard</a>
+            <a href="../pilot/flight_request.html">New Flight Plan</a>
+            <a href="../pilot/my_flights.html">My Flights</a>
+            <a href="../tech/drones.html">Drone Grid</a>
+            <a href="../tech/maintenance.html">Maintenance</a>
+            <a href="flights.html">Flight Schedule</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="users.html">Users</a>
             <a href="../safety/dashboard.html">Safety</a>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <h1>Master Flight Schedule</h1>
 
-        <form action="#" method="get">
+        <form action="#" method="get" class="filter-form">
             <label for="filter">Show</label>
             <select id="filter" name="status">
                 <option value="">All flights</option>
@@ -35,121 +38,127 @@
                 <option value="Approved">Approved</option>
                 <option value="Denied">Denied</option>
             </select>
-            <button type="submit">Filter</button>
+            <button type="submit" class="btn btn-small btn-ghost">Filter</button>
         </form>
 
-        <table>
-            <caption>All flight requests, pending first</caption>
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Start</th>
-                    <th>Pilot</th>
-                    <th>Drone</th>
-                    <th>Duration</th>
-                    <th>Coordinates</th>
-                    <th>Purpose</th>
-                    <th>Status</th>
-                    <th>Decision</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>4</td>
-                    <td>2027-01-25 08:30</td>
-                    <td>Tanvir Ahmed</td>
-                    <td>DJI-M300-001</td>
-                    <td>45 min</td>
-                    <td>23.780573, 90.279239</td>
-                    <td>Solar farm mapping</td>
-                    <td>Pending</td>
-                    <td>
-                        <form action="#" method="post">
-                            <input type="hidden" name="flight_id" value="4">
-                            <label for="reason-4">Reason</label>
-                            <select id="reason-4" name="reason" required>
-                                <option value="">-- Select a reason --</option>
-                                <option>All clear</option>
-                                <option>Weather</option>
-                                <option>Drone grounded</option>
-                                <option>Airspace conflict</option>
-                                <option>Incomplete plan</option>
-                                <option>Other</option>
-                            </select>
-                            <label for="note-4">Note</label>
-                            <input type="text" id="note-4" name="note" maxlength="200" placeholder="Optional">
-                            <button type="submit" name="decision" value="Approved">Approve</button>
-                            <button type="submit" name="decision" value="Denied">Deny</button>
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>2027-03-15 10:00</td>
-                    <td>Demo Pilot</td>
-                    <td>DJI-M3E-002</td>
-                    <td>60 min</td>
-                    <td>23.810331, 90.412521</td>
-                    <td>Bridge inspection</td>
-                    <td>Pending</td>
-                    <td>
-                        <form action="#" method="post">
-                            <input type="hidden" name="flight_id" value="5">
-                            <label for="reason-5">Reason</label>
-                            <select id="reason-5" name="reason" required>
-                                <option value="">-- Select a reason --</option>
-                                <option>All clear</option>
-                                <option>Weather</option>
-                                <option>Drone grounded</option>
-                                <option>Airspace conflict</option>
-                                <option>Incomplete plan</option>
-                                <option>Other</option>
-                            </select>
-                            <label for="note-5">Note</label>
-                            <input type="text" id="note-5" name="note" maxlength="200" placeholder="Optional">
-                            <button type="submit" name="decision" value="Approved">Approve</button>
-                            <button type="submit" name="decision" value="Denied">Deny</button>
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2026-09-01 09:00</td>
-                    <td>Demo Pilot</td>
-                    <td>DJI-M300-001</td>
-                    <td>90 min</td>
-                    <td>23.822350, 90.427160</td>
-                    <td>Campus roof survey</td>
-                    <td>Approved</td>
-                    <td>All clear</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>2026-10-30 07:00</td>
-                    <td>Demo Pilot</td>
-                    <td>AUT-EVO-003</td>
-                    <td>30 min</td>
-                    <td>23.794500, 90.404300</td>
-                    <td>Construction site mapping</td>
-                    <td>Denied</td>
-                    <td>Drone grounded</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>2027-02-10 10:00</td>
-                    <td>Demo Pilot</td>
-                    <td>DJI-M300-001</td>
-                    <td>60 min</td>
-                    <td>23.822350, 90.427160</td>
-                    <td>Roof inspection of Building D</td>
-                    <td>Approved</td>
-                    <td>All clear</td>
-                </tr>
-            </tbody>
-        </table>
+        <section class="card">
+            <table>
+                <caption>All flight requests, pending first</caption>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Start</th>
+                        <th>Pilot</th>
+                        <th>Drone</th>
+                        <th>Duration</th>
+                        <th>Coordinates</th>
+                        <th>Purpose</th>
+                        <th>Status</th>
+                        <th>Decision</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="mono">4</td>
+                        <td class="mono">2027-01-25 08:30</td>
+                        <td>Tanvir Ahmed</td>
+                        <td class="mono">DJI-M300-001</td>
+                        <td class="mono">45 min</td>
+                        <td class="mono">23.780573, 90.279239</td>
+                        <td>Solar farm mapping</td>
+                        <td><span class="badge badge-pending">Pending</span></td>
+                        <td>
+                            <form action="#" method="post" class="decision-form">
+                                <input type="hidden" name="flight_id" value="4">
+                                <label for="reason-4">Reason</label>
+                                <select id="reason-4" name="reason" required>
+                                    <option value="">-- Select a reason --</option>
+                                    <option>All clear</option>
+                                    <option>Weather</option>
+                                    <option>Drone grounded</option>
+                                    <option>Airspace conflict</option>
+                                    <option>Incomplete plan</option>
+                                    <option>Other</option>
+                                </select>
+                                <label for="note-4">Note</label>
+                                <input type="text" id="note-4" name="note" maxlength="200" placeholder="Optional">
+                                <div class="decision-buttons">
+                                    <button type="submit" name="decision" value="Approved" class="btn btn-small btn-ok">Approve</button>
+                                    <button type="submit" name="decision" value="Denied" class="btn btn-small btn-danger">Deny</button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mono">5</td>
+                        <td class="mono">2027-03-15 10:00</td>
+                        <td>Demo Pilot</td>
+                        <td class="mono">DJI-M3E-002</td>
+                        <td class="mono">60 min</td>
+                        <td class="mono">23.810331, 90.412521</td>
+                        <td>Bridge inspection</td>
+                        <td><span class="badge badge-pending">Pending</span></td>
+                        <td>
+                            <form action="#" method="post" class="decision-form">
+                                <input type="hidden" name="flight_id" value="5">
+                                <label for="reason-5">Reason</label>
+                                <select id="reason-5" name="reason" required>
+                                    <option value="">-- Select a reason --</option>
+                                    <option>All clear</option>
+                                    <option>Weather</option>
+                                    <option>Drone grounded</option>
+                                    <option>Airspace conflict</option>
+                                    <option>Incomplete plan</option>
+                                    <option>Other</option>
+                                </select>
+                                <label for="note-5">Note</label>
+                                <input type="text" id="note-5" name="note" maxlength="200" placeholder="Optional">
+                                <div class="decision-buttons">
+                                    <button type="submit" name="decision" value="Approved" class="btn btn-small btn-ok">Approve</button>
+                                    <button type="submit" name="decision" value="Denied" class="btn btn-small btn-danger">Deny</button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mono">1</td>
+                        <td class="mono">2026-09-01 09:00</td>
+                        <td>Demo Pilot</td>
+                        <td class="mono">DJI-M300-001</td>
+                        <td class="mono">90 min</td>
+                        <td class="mono">23.822350, 90.427160</td>
+                        <td>Campus roof survey</td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="muted">All clear</td>
+                    </tr>
+                    <tr>
+                        <td class="mono">2</td>
+                        <td class="mono">2026-10-30 07:00</td>
+                        <td>Demo Pilot</td>
+                        <td class="mono">AUT-EVO-003</td>
+                        <td class="mono">30 min</td>
+                        <td class="mono">23.794500, 90.404300</td>
+                        <td>Construction site mapping</td>
+                        <td><span class="badge badge-denied">Denied</span></td>
+                        <td class="muted">Drone grounded</td>
+                    </tr>
+                    <tr>
+                        <td class="mono">3</td>
+                        <td class="mono">2027-02-10 10:00</td>
+                        <td>Demo Pilot</td>
+                        <td class="mono">DJI-M300-001</td>
+                        <td class="mono">60 min</td>
+                        <td class="mono">23.822350, 90.427160</td>
+                        <td>Roof inspection of Building D</td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="muted">All clear</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>DroneOps - Web Technologies (Lab) group project</p>
     </footer>
 </body>
